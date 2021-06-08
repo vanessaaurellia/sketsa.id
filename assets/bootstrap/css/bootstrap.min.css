@@ -4299,6 +4299,7 @@ fieldset:disabled .btn {
 }
 
 .navbar {
+	height: 80px;
 	position: relative;
 	display: flex;
 	flex-wrap: wrap;
@@ -12464,4 +12465,10 @@ body {
 		top: 13px;
 		transform: rotate(45deg)
 	}
+}
+
+.navbar-center {
+    position: absolute;
+    left: 50%;
+    transform: translatex(-50%);
 }
