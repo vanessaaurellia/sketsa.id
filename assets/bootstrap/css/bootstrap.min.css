@@ -12472,3 +12472,7 @@ body {
     left: 50%;
     transform: translatex(-50%);
 }
+
+.fa-star{
+  color: #E9AD4A;
+}
