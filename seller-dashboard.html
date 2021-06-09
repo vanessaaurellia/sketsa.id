@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <link rel="shortcut icon" href="assets/img/logo2.png" type="image/png"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>sketsa.id - Commission Details</title>
+    <title>sketsa.id - Dashboard</title>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
@@ -23,11 +23,6 @@
         <div class="container"><a class="navbar-brand logo" href="user-dashboard.html"><img src="assets/img/logo.png" style="height: 50px;"></a>
           <ul class="nav navbar-center justify-content-center ms-auto">
             <li class="nav-item">
-              <div class="input-group justify-content-center">
-                <input type="search" size="60" class="form-control rounded" placeholder="Search" aria-label="Search"
-                  aria-describedby="search-addon" />
-                <button type="button" class="btn btn-primary">search</button>
-              </div>
             </li>
           </ul>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-list-4" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -124,19 +119,22 @@
                       </li>
                       <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                         <img alt="image" src="https://s3.eu-central-1.amazonaws.com/bootstrapbaymisc/blog/24_days_bootstrap/fox.jpg" width="40" height="40" class="rounded-circle mr-1">
-                        <div class="d-sm-none d-lg-inline-block">Hi, Hamster</div></a>
+                        <div class="d-sm-none d-lg-inline-block">Hi, Seller</div></a>
                         <div class="dropdown-menu dropdown-menu-right">
                           <a href="#" class="dropdown-item has-icon">
-                            <i class="far fa-user"></i> Profile
+                            <i class="fas fa-pencil-ruler"></i> Commissions
                           </a>
                           <a href="#" class="dropdown-item has-icon">
-                            <i class="fas fa-bolt"></i> Activities
+                            <i class="fas fa-store-alt"></i> Sales
+                          </a>
+                          <a href="#" class="dropdown-item has-icon">
+                            <i class="fas fa-shopping-bag"></i> Purchases
                           </a>
                           <a href="#" class="dropdown-item has-icon">
                             <i class="fas fa-cog"></i> Settings
                           </a>
                           <a href="seller-dashboard.html" class="dropdown-item has-icon">
-                            <i class="fas fa-star"></i> Seller
+                            <i class="fas fa-star"></i> User
                           </a>
                           <div class="dropdown-divider"></div>
                           <a href="index.html" class="dropdown-item has-icon text-danger">
@@ -149,112 +147,94 @@
         </div>
     </nav>
     <main class="page landing-page">
-      <section class="clean-block features" style="margin-top: 80px;background: #f8f8f6;">
-        <div class="container" >
+      <section class="clean-block features" style="margin-top: 60px;background: #f8f8f6;">
+        <div class="container">
             <div class="row">
-                <div class="col-md-6" style="padding-right: 35px;"><img class="img-fluid" src="assets/img/place.jpg" style="margin-bottom: 20px; margin-top: 70px;">
-                    <div class="row">
-                        <div class="col"><img class="img-fluid" src="assets/img/place.jpg"></div>
-                        <div class="col"><img class="img-fluid" src="assets/img/place.jpg"></div>
-                        <div class="col"><img class="img-fluid" src="assets/img/place.jpg"></div>
-                        <div class="col"><img class="img-fluid" src="assets/img/place.jpg"></div>
-                    </div>
-                    <h2 style="margin-bottom: 35px; margin-top: 50px;">Reviews (100)</h2>
-                    <div class="container" tyle="margin-bottom: 25px;">
-                      <h2>4.9/5</h2>
-                      <i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>
-                    </div>
-                    <hr>
-                    <div class="container" style="margin-bottom: 25px;margin-top: 25px;">
-                      <div class="row">
-                          <div class="col-md-4 col-xxl-2"><img class="rounded-circle" src="assets/img/profile.png" style="width: 75px;"></div>
-                          <div class="col-md-4 col-xxl-2"><h6 style="font-size: 24px;">Name</h6><h6 class="text-muted mb-2">Today</h6></div>
-                          <div class="col-md-4 col-xxl-8"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><p>Woah it’s so good, nice</p></div>
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="container" style="margin-top: 25px;margin-bottom: 25px;">
-                      <div class="row">
-                          <div class="col-md-4 col-xxl-2"><img class="rounded-circle" src="assets/img/profile.png" style="width: 75px;"></div>
-                          <div class="col-md-4 col-xxl-2"><h6 style="font-size: 24px;">Name</h6><h6 class="text-muted mb-2">Today</h6></div>
-                          <div class="col-md-4 col-xxl-8"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><p>The artist is very nice and helpful, thanks!</p></div>
-                      </div>
-                    </div>
-                    <div>
-                    <hr>
-                    <nav aria-label="Page navigation example">
-                      <ul class="pagination justify-content-end">
-                        <li class="page-item disabled">
-                          <a class="page-link" href="#" tabindex="-1" aria-label="Previous">
-                            <span aria-hidden="true">&laquo;</span>
-                            <span class="sr-only">Previous</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item"><a class="page-link" href="#">2</a></li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li>
-                        <li class="page-item">
-                          <a class="page-link" href="#" aria-label="Next"><span aria-hidden="true">&raquo;</span>
-                            <span class="sr-only">Next</span></a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                    <section class="highlight-phone">
-                        <div class="intro">
-                            <h2 style="margin-bottom: 10px; margin-top: 70px;">Title</h2>
-                            <h6 class="text-muted mb-2" style="font-size: 24px;">Rp 100.000</h6>
-                            <p style="margin-top: 25px;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.<br></p>
-                            <h2 style="margin-bottom: 10px;font-size: 24px;">Seller Name<br></h2>
-                            <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xxl-2"><img class="rounded-circle" src="assets/img/profile.png" style="width: 75px;"></div>
+                <div class="col-md-6 col-xl-5 col-xxl-4">
+                    <div class="card" style="margin-top: 80px;">
+                        <div class="card-body">
+                            <p class="card-text" style="margin-top: 25px;text-align: center;"><img class="rounded-circle" src="assets/img/profile.png" style="width: 300px;" style="margin-bottom: 15px;"></p>
+                            <h4 class="card-title" style="text-align: center;margin-bottom: 14px;">Seller</h4>
+                            <h4 class="card-title" style="text-align: center;font-size: 18px;">4.2</h4>
+                            <h6 class="text-muted card-subtitle mb-2" style="text-align: center;">(300 Reviews)<br></h6>
+                            <h6 class="text-muted card-subtitle mb-2" style="text-align: center;"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star-o"></i><br></h6>
+                            <div class="row" style="margin-top: 25px;">
                                 <div class="col">
-                                    <p style="margin-top: 0px;margin-bottom: 0px;">Online: 2 days ago<br></p>
-                                    <div class="form-group">
-                                        <i class="fa fa-star"></i>4.2 (300 Reviews)
-                                    </div>
+                                    <p style="margin-bottom: 10px;">Member Since<br></p>
+                                </div>
+                                <div class="col">
+                                    <p style="margin-bottom: 10px;">December 2020<br></p>
                                 </div>
                             </div>
-                            <h2 style="margin-bottom: 10px;font-size: 24px;">Available Upgrades<br></h2>
-                            <div class="row" style="margin-bottom: 10px;">
-                                <div class="col-xxl-5">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Enhanced Background<br></label></div>
+                            <div class="row" style="margin-top: 25px;">
+                                <div class="col">
+                                    <p style="margin-bottom: 10px;">Response Time<br></p>
                                 </div>
                                 <div class="col">
-                                    <p style="margin-top: 0px;margin-bottom: 0px;">+Rp 20.000<br></p>
-                                </div>
-                                <div class="col">
-                                    <p style="margin-top: 0px;margin-bottom: 0px;">+2 days<br></p>
+                                    <p style="margin-bottom: 10px;">1 hour<br></p>
                                 </div>
                             </div>
-                            <div class="row" style="margin-bottom: 10px;">
-                                <div class="col-xxl-5">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-1"><label class="form-check-label" for="formCheck-1">Full Color Background<br></label></div>
-                                </div>
-                                <div class="col">
-                                    <p style="margin-top: 0px;margin-bottom: 0px;">+Rp 35.000<br></p>
-                                </div>
-                                <div class="col">
-                                    <p style="margin-top: 0px;margin-bottom: 0px;">+3 days<br></p>
-                                </div>
-                            </div>
-                            <div class="row" style="margin-bottom: 35px;">
-                                <div class="col-xxl-5">
-                                    <div class="form-check"><input class="form-check-input" type="checkbox" id="formCheck-2"><label class="form-check-label" for="formCheck-1">Revise 2x<br></label></div>
-                                </div>
-                                <div class="col">
-                                    <p style="margin-top: 0px;margin-bottom: 0px;">+Rp 40.000<br></p>
-                                </div>
-                                <div class="col">
-                                    <p style="margin-top: 0px;margin-bottom: 0px;">+4 days<br></p>
-                                </div>
-                            </div>
+                            <h4 class="card-title" style="text-align: left;margin-bottom: 10px;margin-top: 25px;">Description<br></h4>
+                            <p class="card-text" style="margin-top: 10px;">Nullam id dolor id nibh ultricies vehicula ut id elit. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus.</p>
                         </div>
-                        <div class="d-grid gap-2">
-                            <button onclick="location.href='payment.html'" class="btn btn-primary btn-lg" type="button" style="font-size: 18px;">Continue</button>
-                          </div>
-                    </section>
+                    </div>
+                </div>
+                <div class="col-md-6 col-xl-7 col-xxl-8">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist" style="margin-top: 80px;">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" id="comissions-tab" data-bs-toggle="tab" data-bs-target="#comissions" type="button" role="tab" aria-controls="comissions" aria-selected="true"> Comissions </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="recent-tab" data-bs-toggle="tab" data-bs-target="#recent" type="button" role="tab" aria-controls="recent" aria-selected="false"> Recent Works </button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" id="collections-tab" data-bs-toggle="tab" data-bs-target="#collections" type="button" role="tab" aria-controls="collections" aria-selected="false"> Collections </button>
+                        </li>
+                    </ul>
+                    <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="comissions" role="tabpanel" aria-labelledby="comissions-tab">
+                                <section class="photo-gallery">
+                                    <div class="container">
+                                        <div class="row photos" data-bss-baguettebox="" style="margin-top: 40px;">
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place.jpg" data-dismiss="modal" ><img class="img-fluid" src="assets/img/place.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place.jpg"><img class="img-fluid" src="assets/img/place.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place.jpg"><img class="img-fluid" src="assets/img/place.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place.jpg"><img class="img-fluid" src="assets/img/place.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place.jpg"><img class="img-fluid" src="assets/img/place.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place.jpg"><img class="img-fluid" src="assets/img/place.jpg"></a></div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="tab-pane fade" id="recent" role="tabpanel" aria-labelledby="recent-tab">
+                                <section class="photo-gallery">
+                                    <div class="container">
+                                        <div class="row photos" data-bss-baguettebox="" style="margin-top: 40px;">
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place2.jpg"><img class="img-fluid" src="assets/img/place2.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place2.jpg"><img class="img-fluid" src="assets/img/place2.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place2.jpg"><img class="img-fluid" src="assets/img/place2.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place2.jpg"><img class="img-fluid" src="assets/img/place2.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place2.jpg"><img class="img-fluid" src="assets/img/place2.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place2.jpg"><img class="img-fluid" src="assets/img/place2.jpg"></a></div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                            <div class="tab-pane fade" id="collections" role="tabpanel" aria-labelledby="collections-tab">
+                                <section class="photo-gallery">
+                                    <div class="container">
+                                        <div class="row photos" data-bss-baguettebox="" style="margin-top: 40px;">
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place3.jpg"><img class="img-fluid" src="assets/img/place3.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place3.jpg"><img class="img-fluid" src="assets/img/place3.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place3.jpg"><img class="img-fluid" src="assets/img/place3.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place3.jpg"><img class="img-fluid" src="assets/img/place3.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place3.jpg"><img class="img-fluid" src="assets/img/place3.jpg"></a></div>
+                                            <div class="col-sm-6 col-md-4 col-lg-3 col-xxl-4 item" style="margin-bottom: 20px;"><a href="assets/img/place3.jpg"><img class="img-fluid" src="assets/img/place3.jpg"></a></div>
+                                        </div>
+                                    </div>
+                                </section>
+                            </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -278,7 +258,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.10.0/baguetteBox.min.js"></script>
     <script src="assets/js/vanilla-zoom.js"></script>
     <script src="assets/js/theme.js"></script>
-    
+    <script src="assets/js/Lightbox-Gallery.js"></script>
     <script src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js'></script>
     <script src='https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js'></script>
 </body>
