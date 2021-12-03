@@ -38,5 +38,5 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const PORT = 8000
-app.listen(PORT, () => console.log(`Listening to port ${PORT}`))
+const PORT = 8000;
+app.listen(PORT, () => console.log(`Listening to port ${PORT}`));
