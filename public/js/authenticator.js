@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, onAuthStateChanged
+     } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
 
 const firebaseApp = initializeApp({
     apiKey: "AIzaSyDwAKkDF26AZa-x3hqZYaB4EFcxwGKOJOE",
@@ -11,16 +12,15 @@ const firebaseApp = initializeApp({
     measurementId: "G-PSZZT17JDE"   
 });
 
-const auth = getAuth(firebaseApp);    
+const auth = getAuth(firebaseApp);
 
-var buttonRegister = $("#register-button");
-buttonRegister.click(function(){
+//user create an account with email and password when user clicks register button
+$("#register-button").click(function(){
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     console.log(email);
     console.log(password);
     
-    //user create an account with email and password
     createUserWithEmailAndPassword(auth, email, password)
         .then((userCredential) => {
             const user = userCredential.user;
@@ -44,17 +44,15 @@ buttonRegister.click(function(){
         });
 });
 
-var buttonLogin = $("#login-button");
-buttonLogin.click(function(){
+//user sign in by inputting their email and password when user clicks login button
+$("#login-button").click(function(){
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     console.log(email);
     console.log(password);
     
-    //user sign in by inputting their email and password
     signInWithEmailAndPassword(auth, email, password)
     .then(function(userCredential){
-        const user = userCredential.user;
         window.location.replace('/dashboard');
         console.log("successful login");
     })
@@ -72,3 +70,21 @@ buttonLogin.click(function(){
         } 
     });
 });
+
+onAuthStateChanged(auth, (user) => {
+    if (user) {
+        var email = user.email;
+        var greetingText = $("#greeting-text");
+        console.log(user);
+        console.log(`User email is ${email}`);
+        greetingText.text(`Good morning ${email}`);
+        // ...
+    } else {
+        // User is signed out
+        console.log("No user found");
+        // ...
+    }
+    });
+
+
+
