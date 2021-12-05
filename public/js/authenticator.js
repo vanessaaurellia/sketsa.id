@@ -1,7 +1,9 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, signOut, updateProfile } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+import { getFirestore, setDoc, doc } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
 
-function getFirebaseAuthenticationApp(){
+
+function initializeFirebaseApp(){
     const firebaseApp = initializeApp({
         apiKey: "AIzaSyDwAKkDF26AZa-x3hqZYaB4EFcxwGKOJOE",
         authDomain: "sketsa-2bd5e.firebaseapp.com",
@@ -11,15 +13,13 @@ function getFirebaseAuthenticationApp(){
         appId: "1:270310736867:web:382525ebcd31f7b9b056d6",
         measurementId: "G-PSZZT17JDE"   
     });
-    
-    const auth = getAuth(firebaseApp);
-    return auth;
+    return firebaseApp;
 }
 
 
 //user create an account with email and password when user clicks register button
 function register(){
-    const auth = getFirebaseAuthenticationApp();
+    const auth = getAuth(initializeFirebaseApp());
     var username = document.getElementById("username").value;
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
@@ -29,18 +29,30 @@ function register(){
     .then((userCredential) => {    
         //set the username of the user
         const user = userCredential.user;
-        // window.location.replace('/dashboard');
         updateProfile(user, {
             displayName: username
        })
-       .then(() => {
-            window.location.replace('/dashboard');
-            console.log(user);
-            console.log(`Successfully changed the user display name to ${username}`);
+       .then(() => {         
+
        })
        .catch(function(error){
             console.log(error); 
        })
+       //create a data of user personal data
+       const db = getFirestore(initializeFirebaseApp());
+       var userData = {
+           firstName: document.getElementById("first_name").value,
+           lastName: document.getElementById("last_name").value
+       }
+       setDoc(doc(db, `users/${username}`), userData)  
+       .then(function(){
+           window.location.replace('/dashboard');
+           console.log(user);
+           console.log(`Successfully changed the user display name to ${username}`);
+       })
+       .catch(function(error){
+           console.log(`${error}`);
+       }); 
     })
     .catch((error) => {
         //show error message in the card html
@@ -61,7 +73,7 @@ function register(){
 
 //user sign in by inputting their email and password when user clicks login button
 function login(){
-    const auth = getFirebaseAuthenticationApp();
+    const auth = getAuth(initializeFirebaseApp());
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
     
@@ -85,7 +97,7 @@ function login(){
 };
 
 function logout(){
-    const auth = getFirebaseAuthenticationApp();
+    const auth = getAuth(initializeFirebaseApp());
     signOut(auth)
     .then(() => {
         window.location.replace('/');

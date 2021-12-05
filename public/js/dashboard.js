@@ -1,5 +1,6 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-app.js";
 import { getAuth, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-auth.js";
+import { getFirestore, collection, getDocs } from "https://www.gstatic.com/firebasejs/9.6.0/firebase-firestore.js";
 
 //check if a user has been signed in
 function initDashboard(){
@@ -31,6 +32,11 @@ function initDashboard(){
         }
     });
     
+    // const db = getFirestore(firebaseApp);
+    // const querySnapshot = getDocs(collection(db, "users/"));
+    // querySnapshot.forEach((doc) => {
+    //     console.log(`${doc.id} => ${doc.data()}`);
+    // });
 }
 
 

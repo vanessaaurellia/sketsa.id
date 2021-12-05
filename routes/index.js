@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 
-/* GET home page. */
+//handles all route starting with /
 router.get('/', function(req, res, next) {
   res.render('pages/index');
 });
@@ -14,9 +14,9 @@ router.get('/register', function(req, res, next){
   res.render('pages/register');
 })
 
-router.get('/dashboard', function(req, res, next){
-  //user can go to the dashboard if they have valid token
-  res.render('pages/dashboard');
+
+router.get('/seller-dashboard', function(req, res, next){
+  res.render('pages/seller-dashboard');
 })
 
 module.exports = router;
