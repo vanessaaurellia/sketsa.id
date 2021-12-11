@@ -1,18 +1,31 @@
-var createError = require('http-errors');
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+import createError from 'http-errors';
+import express from 'express';
+import path from 'path'
+import cookieParser from 'cookie-parser';
+import logger from 'morgan';
 
-var indexRouter = require('./routes/index');
-var dashboardRouter = require('./routes/dashboard');
-var usersRouter = require('./routes/users');
+import indexRouter from 'Routes/index';
+import dashboardRouter from 'Routes/dashboard';
+import sellerRouter from 'Routes/seller';
+
+// var createError = require('http-errors');
+// var express = require('express');
+// var path = require('path');
+// var cookieParser = require('cookie-parser');
+// var logger = require('morgan');
+
+// var indexRouter = require('./routes/index');
+// var dashboardRouter = require('./routes/dashboard');
+// var sellerRouter = require('./routes/seller');
+// const __dirname = path.resolve();
 
 var app = express();
 
 // view engine setup
-app.use('/views/pages', express.static(path.resolve(__dirname, 'views/pages')));
-app.set('view engine', 'ejs');
+app.use(express.static(path.join(__dirname, 'public')));
+app.use('/views/pages', express.static(path.resolve(__dirname, '/views/pages')));
+app.set('view engine', 'ejs'); 
+app.set('env', 'development');
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -22,8 +35,8 @@ app.use('/public', express.static(path.resolve(__dirname, 'public')));
 
 // if the link starts with /[a-link] then use dashboard router
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 app.use('/dashboard', dashboardRouter);
+app.use('/seller', sellerRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

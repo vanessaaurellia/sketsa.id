@@ -1,5 +1,5 @@
-var express = require('express');
-var router = express.Router();
+import { Router } from 'express';
+var router = Router();
 
 //handles all route starting with /
 router.get('/', function(req, res, next) {
@@ -14,9 +14,4 @@ router.get('/register', function(req, res, next){
   res.render('pages/register');
 })
 
-
-router.get('/seller-dashboard', function(req, res, next){
-  res.render('pages/seller-dashboard');
-})
-
-module.exports = router;
+export default router;
