@@ -1,0 +1,121 @@
+<%- include('../../template/header-dashboard.ejs') %> 
+<%- include('../../template/navbar-seller.ejs') %> 
+<main class="page landing-page">
+  <section class="clean-block features" style="margin-top: 60px;background: #f8f8f6;">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <h1 style="text-align: center;margin-bottom: 40px; margin-top: 80px;">Add New Commission<br></h1>
+                <form method="POST" action="#" class="needs-validation" novalidate="">
+                    <div class="col">
+                        <div class="form-group">
+                            <label for="art" style="font-size: 16px;">Art Style</label>
+                            <input style="font-size: 16px;" id="art" type="text" class="form-control" name="art" tabindex="1" required autofocus>
+                            <div class="invalid-feedback" style="font-size: 16px;"> 
+                                Please fill in your art style
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="price" style="font-size: 16px;">Price</label>
+                            <input style="font-size: 16px;" id="price" type="number" class="form-control" name="price" tabindex="1" required autofocus>
+                            <div class="invalid-feedback" style="font-size: 16px;"> 
+                                Please fill in your price
+                            </div>
+                        </div>
+
+                            <div class="form-group">
+                                <label for="category" style="font-size: 16px;">Category</label>
+                                <input style="font-size: 16px;" id="category" type="text" class="form-control" name="category" tabindex="1" required autofocus>
+                                <div class="invalid-feedback" style="font-size: 16px;"> 
+                                  Please fill in your category
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="title" style="font-size: 16px;">Title</label>
+                                <input style="font-size: 16px;" id="title" type="text" class="form-control" name="title" tabindex="1" required autofocus>
+                                <div class="invalid-feedback" style="font-size: 16px;"> 
+                                  Please fill in your title
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="description" style="font-size: 16px;">Description</label>
+                                <textarea class="form-control" id="description" rows="4"></textarea>
+                                <div class="invalid-feedback" style="font-size: 16px;"> 
+                                  Please fill in your description
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="instruction" style="font-size: 16px;">Instruction</label>
+                                <textarea class="form-control" id="instructions" rows="4"></textarea>
+                                <div class="invalid-feedback" style="font-size: 16px;"> 
+                                  Please fill in your instruction
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tools" style="font-size: 16px;">Tools</label>
+                                <input style="font-size: 16px;" id="tools" type="text" class="form-control" name="tools" tabindex="1" required autofocus>
+                                <div class="invalid-feedback" style="font-size: 16px;"> 
+                                  Please fill in your tools
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="process" style="font-size: 16px;">Process Time</label>
+                                <input style="font-size: 16px;" id="process-time" type="number" class="form-control" name="process" tabindex="1" required autofocus>
+                                <div class="invalid-feedback" style="font-size: 16px;"> 
+                                  Please fill in your process time
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tags" style="font-size: 16px;">Tags</label>
+                                <input style="font-size: 16px;" id="tags" type="text" class="form-control" name="tags" tabindex="1" required autofocus>
+                                <div class="invalid-feedback" style="font-size: 16px;"> 
+                                  Please fill in your tools
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="tags" style="font-size: 16px;">Insert Photo</label><br>
+                                <input type="file" class="form-control-file" onchange="previewFile()" id="input-image">
+                                <img id="input-image-preview" src="" height="200" alt="Image Preview">  
+                            </div>
+                        
+                    
+                    <div class="d-grid gap-2">
+                        <button class="btn btn-primary btn-lg" id="upload-data" type="button" style="font-size: 18px;" data-toggle="modal" data-target="#exampleModalCenter">Confirm</button>
+                    </div>
+                    <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="exampleModalLongTitle">Commision successfully added</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close" style="background-color: white;">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                                Commision successfully added
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    <br>
+                    <div class="d-grid gap-2">
+                        <button onclick="location.href='commisions.html'" class="btn btn-outline-danger btn-lg" type="button" style="font-size: 18px;">Cancel</button>
+                    </div>
+                  </form>
+            </div>
+        </div>
+    </div>
+</section>
+</main>
+<%- include('../../template/footer.ejs') %> 
