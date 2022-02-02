@@ -24,9 +24,38 @@ function onSignIn(googleUser) {
   console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present
   
   data = {
+    type: "google",
     aud: id_token,
     name: profile.getName(),
     email: profile.getEmail(),
+  }
+
+  fetch("/login/", {
+    method: "POST",
+    headers: {
+      "X-CSRFToken": getCookie("csrftoken"),
+      'Content-Type': 'application/json'
+    }, 
+    body: JSON.stringify(data),
+    credentials: 'include',
+    redirect: 'follow'
+  }).then(res => {
+    console.log("Request complete! response:", res);
+    //direct user to response url if response is 200
+    if (res.status == 200) {
+      window.location.replace(res.url);
+    }
+  });
+}
+
+function normalSignIn(){
+  var email = document.getElementById("email").value;
+  var password = document.getElementById("password").value;
+
+  data = {
+    type: "normal",
+    email: email,
+    password: password,
   }
 
   fetch("/login/", {
@@ -57,6 +86,5 @@ function onSignOut() {
   var auth2 = gapi.auth2.getAuthInstance();
   auth2.signOut().then(function () {
     console.log('User signed out.');
-    window.location.replace('/');
   });
 }

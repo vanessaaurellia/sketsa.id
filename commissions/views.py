@@ -15,7 +15,8 @@ def index(request):
 
 def login(request):
     if request.method == "POST":
-        data = json.loads(request.body) 
+        data = json.loads(request.body)
+         
         token = data['aud']
         try:
             # Check if the token is valid from client
@@ -66,7 +67,6 @@ def commissions(request, commissions_id):
     except:
         raise Http404("Commissions does not exist")
     
-    print(commissions.get_price())
     data = {
         'commissions': commissions,
         'seller': seller

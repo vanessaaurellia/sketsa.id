@@ -20,6 +20,7 @@
 </head>
 
 {% load static %}
+{% load filter %}
 <body>
     <nav class="navbar navbar-light navbar-expand-lg fixed-top bg-white">
         <div class="container"><a class="navbar-brand logo" href=""><img src="/assets/img/logo.png" style="height: 50px;"></a>
@@ -167,7 +168,7 @@
                   <div class="card">
                       <div class="card-body" style="padding: 0px;"><img class="img-fluid" src="/{{commissions.main_image}}"  style="margin-bottom: 15px;">
                           <h4 class="card-title" style="margin-right: 16px;margin-left: 16px;">{{ commissions.commissions_name }}</h4>
-                          <h6 class="text-muted card-Rp 100.000 mb-2" style="margin-right: 16px;margin-left: 16px;margin-top: 0px;padding-bottom: 10px;">{{ commissions.commissions_price }}</h6>
+                          <h6 class="text-muted card-Rp 100.000 mb-2" style="margin-right: 16px;margin-left: 16px;margin-top: 0px;padding-bottom: 10px;">{{ commissions.commissions_price|display_as_rupiah }}</h6>
                       </div>  
                   </a>  
                 </div>
